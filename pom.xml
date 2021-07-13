@@ -26,6 +26,11 @@
     		<groupId>org.springframework.boot</groupId>
     		<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!-- Permet de faire du web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<!-- Driver de connexion avec la base de donnés -->
 		<dependency>
 			<groupId>org.postgresql</groupId>

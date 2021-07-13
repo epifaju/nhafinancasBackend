@@ -22,8 +22,9 @@ import lombok.ToString;
 @Getter
 @EqualsAndHashCode
 @ToString
+*/
 @NoArgsConstructor
-@AllArgsConstructor*/
+@AllArgsConstructor
 @Builder
 @Data
 public class Usuario {
