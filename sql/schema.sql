@@ -26,3 +26,5 @@ CREATE TABLE financas.lancamento
   id_usuario bigint REFERENCES financas.usuario (id),
   data_cadastro date default now()
 );
+
+insert into financas.usuario(nome, email, senha, data_cadastro) values('usuario','usuario@email.com','senha', now());
