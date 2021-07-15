@@ -13,15 +13,15 @@ import com.dsousa.minhasfinancas.exception.RegraNegocioException;
 import com.dsousa.minhasfinancas.model.entity.Usuario;
 import com.dsousa.minhasfinancas.service.UsuarioService;
 
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/api/usuarios")
+@RequiredArgsConstructor
 public class UsuarioResource {
 
-	private UsuarioService service;
+	private final UsuarioService service;
 	
-	public UsuarioResource(UsuarioService service) {
-		this.service = service;
-	}
 	@PostMapping
 	public ResponseEntity salvar( @RequestBody UsuarioDTO dto) {
 		

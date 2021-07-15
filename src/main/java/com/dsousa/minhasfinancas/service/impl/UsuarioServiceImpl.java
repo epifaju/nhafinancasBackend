@@ -1,5 +1,7 @@
 package com.dsousa.minhasfinancas.service.impl;
 
+import java.util.Optional;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,6 @@ import com.dsousa.minhasfinancas.exception.RegraNegocioException;
 import com.dsousa.minhasfinancas.model.entity.Usuario;
 import com.dsousa.minhasfinancas.model.repository.UsuarioRepository;
 import com.dsousa.minhasfinancas.service.UsuarioService;
-import java.util.Optional;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
@@ -52,6 +53,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 		if(existe) {
 			throw new RegraNegocioException("Ja existe um usuario cadastrado com esse email.");
 		}
+	}
+
+	@Override
+	public Optional<Usuario> obterPorId(Long id) {
+		
+		return repository.findById(id);
 	}
 
 }
